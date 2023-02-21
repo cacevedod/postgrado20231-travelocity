@@ -1,14 +1,13 @@
-package starter.task;
+package com.travelocity.task;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.actions.OpenUrl;
 import org.openqa.selenium.Keys;
 
-import static starter.page.BusquedaPrincipalPage.*;
+import static com.travelocity.page.BusquedaPrincipalPage.*;
 
 
 public class SeleccionarHospedaje {

@@ -1,4 +1,4 @@
-package starter.page;
+package com.travelocity.page;
 
 import net.serenitybdd.screenplay.targets.Target;
 
