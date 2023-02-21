@@ -3,7 +3,7 @@ package com.travelocity.stepdefinitions;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
-import com.travelocity.task.SeleccionarHospedaje;
+import com.travelocity.task.SeleccionarHospedajeTask;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
@@ -18,7 +18,7 @@ public class HopedajeStepDefinitions {
     @Cuando("{actor} busca un hospedaje para {string}")
     public void busca_un_hospedaje_para(Actor actor, String destino) {
         actor.attemptsTo(
-                SeleccionarHospedaje.simple(destino)
+                SeleccionarHospedajeTask.simple(destino)
         );
 
     }
