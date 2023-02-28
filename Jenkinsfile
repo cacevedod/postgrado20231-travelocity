@@ -15,10 +15,16 @@ pipeline {
 
     stage('static') {
       steps {
-        withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonarqube') {
-          waitForQualityGate(abortPipeline: true, credentialsId: 'sonarQube')
+        script{
+            def scannerHome = tool 'sonarscanner';
+            withSonarQubeEnv('sonar') {
+              sh "${scannerHome}/bin/sonar-scanner"
+            }
+            def qualitygate = waitForQualityGate(abortPipeline: true)
+            if (qualitygate.status != "OK") {
+              error "Pipeline aborted due to quality gate coverage failure: ${qualitygate.status}"
+            }
         }
-
       }
     }
 
