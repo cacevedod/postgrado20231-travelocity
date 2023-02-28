@@ -18,7 +18,7 @@ pipeline {
         script{
             def scannerHome = tool 'sonarscanner';
             withSonarQubeEnv('sonar') {
-              sh "${scannerHome}/bin/sonar-scanner"
+              sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey='travelocity-carlosAD' "
             }
             def qualitygate = waitForQualityGate(abortPipeline: true)
             if (qualitygate.status != "OK") {
