@@ -3,4 +3,4 @@ Característica: Hospedaje
 
   Escenario: Buscar un hospedaje para Cartagena
     Cuando "Carlos" busca un hospedaje para "Cartagena"
-    Entonces debe encontrar al menos una opción disponible
+    Entonces debe encontrar al menos una opcion disponible

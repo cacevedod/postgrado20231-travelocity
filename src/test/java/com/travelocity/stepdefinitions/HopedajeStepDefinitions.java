@@ -22,11 +22,11 @@ public class HopedajeStepDefinitions {
         );
 
     }
-    @Entonces("debe encontrar al menos una opción disponible")
-    public void debe_encontrar_al_menos_una_opción_disponible() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(LISTA_DE_RESULTADOS, isVisible()).forNoMoreThan(Duration.ofSeconds(3))
-        );
+    @Entonces("debe encontrar al menos una opcion disponible")
+    public void debe_encontrar_al_menos_una_opcion_disponible() {
+        //OnStage.theActorInTheSpotlight().attemptsTo(
+        //        WaitUntil.the(LISTA_DE_RESULTADOS, isVisible()).forNoMoreThan(Duration.ofSeconds(3))
+        //);
         Ensure.that(LISTA_DE_RESULTADOS).values().hasSizeGreaterThan(1);
     }
 

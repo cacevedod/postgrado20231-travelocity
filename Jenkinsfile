@@ -9,7 +9,7 @@ pipeline {
 
     stage('test') {
       steps {
-        sh './gradlew clean test aggregate'
+        sh './gradlew clean test aggregate -Dwebdriver.remote.url=http://chrome:4444/wd/hub'
       }
     }
 
